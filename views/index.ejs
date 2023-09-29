@@ -6,7 +6,10 @@
         <h4 class="mb-2">尋找餐廳：</h4>
         <div class="input-group">
           <input type="text" name="keyword" class="form-control" placeholder="輸入餐廳、分類" aria-label="Restaurant Name..."
-            value="" aria-describedby="search-button">
+            <% if (keyword) { %>
+              value="<%= keyword %>"
+            <% } %>
+          aria-describedby="search-button">
           <div class="input-group-append">
             <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
           </div>
@@ -21,7 +24,7 @@
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
       <div class="row row-cols-sm-3">
-        <% data.restaurants.forEach(r=> { %>
+        <% restaurants.forEach(r=> { %>
           <a href="/restaurants/<%= r.id %>" class="text-secondary">
             <div class="card mb-3">
               <img class="card-img-top" src="<%= r.image %>" alt="<%= r.name %>">
@@ -42,7 +45,7 @@
               </div>
             </div>
           </a>
-          <% }) %>
+        <% }) %>
 
       </div>
     </div>
