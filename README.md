@@ -1,5 +1,5 @@
 # 我的餐廳清單
-![snapshot](./snapshot)
+![snapshot](./snapshot.png)
 
 ## 介紹
 瀏覽及搜尋餐廳清單。點擊查看詳細資料，並能連結至餐廳地圖。
